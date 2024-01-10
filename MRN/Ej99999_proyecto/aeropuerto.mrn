@@ -1,0 +1,23 @@
+Persona(DNI(PK), N_PASAPORTE(U), apellidos, nombre, fecha_nacimiento) -- Alejandro Fraile
+
+Cliente(DNI (FK:persona)(PK)) -- Alejandro Fraile
+
+billete(id_billete(PK), fecha, num_asiento, coste, tipo) -- Jesus Santana
+
+Viajero(DNI(FK:persona)(PK), id_billete(FK:billete), vuelo(FK:vuelo)) -- Alejandro Fraile
+
+Compra(cliente: (FK:cliente), billete(FK:billete), (PK:cliente, billete)) -- Jessica Lalaleo
+
+Terminal(Id_terminal(PK)) -- Jesus Santana
+
+Puerta(id_puerta, terminal(FK:terminal), vuelo(FK:vuelo), PK(id_puerta, terminal)) -- Jesus Santana
+
+Vuelo(id_vuelo(PK), fecha_hora_vuelo, duracion) -- Jessica Lalaleo
+
+Avion(matricula(PK), marca, modelo) -- Jessica Lalaleo
+
+Piloto(id_piloto(PK), num_galones, antigüedad, nombre, apellidos, id_copìloto(FK:piloto) aerolinea (FK:aerolinea)) -- Angel Almache
+
+Pilota(vuelo(FK:vuelo), avion(FK: matricula), piloto(FK:piloto)(PK)) -- Angel Almache
+
+Aerolinea(id_aerolinea(PK), nombre) -- Jessica

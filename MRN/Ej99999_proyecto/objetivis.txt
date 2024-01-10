@@ -1,0 +1,11 @@
+-- Aerolineas 5-10 -- Jessica
+-- pilotos 40-60 -- Jessica
+-- aviones 40-60 -- Jesus Santana
+-- vuelos 40-60 -- Jesus Santana
+-- terminal 5-10 -- Ángel
+-- puertas 10-15 -- Ángel
+-- personas 60 -- Alejandro
+-- viajeros 50% personas -- Alejandro
+-- clientes 50% personas -- Alejandro
+-- billete 100% clientes -- TODOS
+
