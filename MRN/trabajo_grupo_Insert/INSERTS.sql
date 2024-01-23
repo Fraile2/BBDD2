@@ -328,3 +328,81 @@ VALUES
 (3, "2013-09-15", "Owen", "Mata Caseres", 4, 20),
 (3, "2016-09-15", "Dario", "Heras Fraga", 6, 20),
 (2, "2017-09-15", "Miquel", "Navarro Gonzalez", 2, 30);
+
+SELECT count(dni_cliente) INTO len_dni_clientes FROM cliente;
+SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1;
+
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, );
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(id_billete, dni_cliente)
+VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
