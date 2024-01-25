@@ -12,15 +12,17 @@ try:
         print("Conexion establecida.")
         cursor=con.cursor()
         contador=f'SELECT count(dni_cliente) FROM {nombre_tabla};'
-        while len(lista_dnis)-1==contador:
+        while (len(lista_dnis)-1)==contador:
             select=f'SELECT dni_cliente FROM {nombre_tabla} ORDER BY {randint(1,contador)} LIMIT 1;'
             cursor.execute(select)
             result=cursor.fetchall()
             aux2=randint(1,15)
             aux=result[randint(1, contador)]
-            if not aux in lista_dnis and not aux2 in lista_billetes:
+            if not aux in lista_dnis:
                 lista_dnis.append(aux)
-                insert=f'INSERT INTO {nombre_tabla}(dni_cliente, id_billete) VALUES({aux},{aux2});'
+                insert=f'INSERT INTO {nombre_tabla}(dni_cliente, id_billete) VALUES(%s, %i);'
+                val=(aux, aux2)
+                cursor.execute(insert,val)
                 con.commit()
 except Exception as e:
     print("Algo ha fallado")

@@ -329,80 +329,35 @@ VALUES
 (3, "2016-09-15", "Dario", "Heras Fraga", 6, 20),
 (2, "2017-09-15", "Miquel", "Navarro Gonzalez", 2, 30);
 
-SELECT count(dni_cliente) INTO len_dni_clientes FROM cliente;
-SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1;
 
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, );
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
-INSERT INTO compra(id_billete, dni_cliente)
-VALUES(FLOOR(RAND()*len_dni_clientes)+1, SELECT dni_cliente FROM cliente ORDER BY RAND() LIMIT 1);
+INSERT INTO compra(dni_cliente,id_billete,fecha_compra)
+VALUES('16917725Y',1,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('17778073Q',1,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('23188871H',2,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('25579646N',2,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('27715253T',3,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('29410835E',4,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('30715198D',5,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('33360699G',5,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('42799486M',5,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('44985796G',6,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('48006290T',6,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('50832138E',6,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('51807164D',7,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('52955438P',7,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('63318845Y',8,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('66592600X',8,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('68649360H',9,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('69125738C',9,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('69131212C',9,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('72636918C',10,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('73860331V',10,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('75618098D',10,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('77152963S',11,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('79003488Y',11,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('80970054A',12,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('86654559N',12,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('86873434L',13,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('90095416T',14,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('92860136M',15,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
+('93690258B',15,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND );
