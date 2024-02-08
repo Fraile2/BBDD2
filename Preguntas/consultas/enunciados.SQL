@@ -33,17 +33,10 @@ SELECT CONCAT(nombre," ", apellidos) AS nombre_apellidos
 FROM piloto
 WHERE RIGHT(nombre, 1)=RIGHT(apellidos, 1);
 
-
+-- Consulta G: Nivel difícil
 -- Muestra todas las personas que hayan pagado
 -- menos de la mitad de la media y que empiecen 
 -- por "j"
-
--- Calcular la totalidad de la cantidad de billetes 
--- comprados por aquellos usuarios cuyo nombre 
--- comienza con una inicial específica que es la "j". 
--- Y calcúlame los usuarios que hayan pagado al menos 
--- la mitad de la media del coste de los billetes.
-
 
 SELECT nombre
 FROM persona
@@ -59,3 +52,19 @@ WHERE nombre LIKE "j%" AND dni IN (
         )
     )
 );
+
+-- CONSULTA D
+
+-- Agrupame por años la suma de las ventas de todos los billetes 
+-- que sean del tipo ida_vuelta
+-- que hayan costado menos de 1000
+
+SELECT YEAR(fecha) AS annio, SUM(coste) AS total_coste
+FROM billete
+WHERE tipo='ida_vuelta'
+GROUP BY YEAR(fecha)
+HAVING total_coste<1000;
+
+-- CONSULTA F
+SELECT
+FROM 
