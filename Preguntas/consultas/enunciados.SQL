@@ -66,5 +66,9 @@ GROUP BY YEAR(fecha)
 HAVING total_coste<1000;
 
 -- CONSULTA F
-SELECT
-FROM 
+-- SELECCIONAME aquellas personas nacidas 
+-- un miercoles
+-- y muestra el nombre en mayusculas
+SELECT UPPER(nombre) AS nombre
+FROM persona
+WHERE WEEKDAY(fecha_nacimiento)=2;
