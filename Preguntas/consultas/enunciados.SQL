@@ -18,4 +18,5 @@ GROUP BY DATE_FORMAT(fecha,"%W");
 
 SELECT ;
 
-
+-- C3 Funciones numericas:
+-- 
