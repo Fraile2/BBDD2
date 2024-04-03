@@ -430,7 +430,6 @@ VALUES
 (3, "2016-09-15", "Dario", "Heras Fraga", 6, 20),
 (2, "2017-09-15", "Miquel", "Navarro Gonzalez", 2, 30);
 
-
 INSERT INTO compra(dni_cliente,id_billete,fecha_compra)
 VALUES('16917725Y',1,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
 ('17778073Q',1,TIMESTAMPADD(SECOND, ROUND(RAND() * TIMESTAMPDIFF(SECOND, '2020-01-01 00:00:00', NOW())), '2020-01-01 00:00:00') + INTERVAL ROUND(RAND() * (10 * 60 * 60)) SECOND ),
@@ -494,3 +493,45 @@ VALUES(1,'16917725Y','2000-11-23'),
 (28,'90095416T','2020-05-12'),
 (29,'92860136M','2021-07-19'),
 (30,'93690258B','2021-07-22');
+
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (10,'PJ',19);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (1,'EK',9);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (5,'P4',1);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (30,'S2',4);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (20,'A5',2);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (3,'C6',16);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (8,'VP-B',20);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (12,'9U',34);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (28,'LZ',31);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (34,'D4',12);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (40,'CC',40);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (29,'TT',33);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (21,'C',23);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (2,'CP',15);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (9,'D',7);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (33,'C3',8);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (37,'LQ',16);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (11,'EK',11);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (22,'7T',17);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (4,'ZA',1);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (6,'YA',8);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (26,'VP-A',29);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (24,'P4',36);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (38,'OE',5);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (7,'HZ',2);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (41,'8P',3);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (32,'OO',18);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (6,'V3',22);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (5,'TY',31);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (23,'A9C',39);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (20,'D2',41);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (1,'EW',29);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (19,'A5',35);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (10,'V2',30);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (41,'PJ',20);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (7,'ZA',10);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (11,'VH',9);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (15,'8P',6);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (22,'LQ',21);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (33,'9U',12);
+INSERT INTO pilota(vuelo,avion,piloto) VALUES (8,'XU',4);

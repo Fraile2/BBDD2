@@ -286,8 +286,7 @@ INSERT INTO aerolinea (nombre) VALUES ("Delta Air Lines");
 INSERT INTO aerolinea (nombre) VALUES ("Emirates Airline");
 
 INSERT INTO piloto(num_galones, antiguedad, nombre, apellidos, aerolinea, id_copiloto)
-VALUES
-(1, "2012-01-01", "Cristian", "Florico Vilcu", 3,1),
+VALUES(1, "2012-01-01", "Cristian", "Florico Vilcu", 3,1),
 (2, "2013-02-15", "Marcos", "Gutierrez Planas", 2,1),
 (2, "2010-04-14", "Francisco", "Fernandez Brañas", 3,1),
 (2, "2017-01-07", "Pilar", "Sanguino Ampuero", 4, 2),
