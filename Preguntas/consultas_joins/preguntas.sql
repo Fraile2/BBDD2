@@ -38,16 +38,17 @@ HAVING marcas LIKE '%,%';
 /*	Pregunta 2
 	Pregunta 3: media 
 	Muestra los nombres de los pilotos 
-	que empiecen por 'M' cuya aerolinea
-	sea 'Iberia'
+	que empiecen por 'M' cuya aerolinea 
+	no sea 'Iberia', contenga una 'r'
 
 */
-SELECT p1.nombre
+SELECT p1.nombre, p1.apellidos
 FROM aerolinea a
 JOIN piloto p1
 ON a.id_aerolinea=p1.aerolinea
 JOIN pilota p2
 ON p1.id_piloto=p2.piloto
-WHERE p1.aerolinea='Iberia'
-AND TIMESTAMPDIFF(YEAR, p1.antiguedad, CURDATE());
+WHERE a.nombre<>'Iberia'
+AND a.nombre LIKE '%r%'
+AND TIMESTAMPDIFF(YEAR, p1.antiguedad, CURDATE())>8;
 
