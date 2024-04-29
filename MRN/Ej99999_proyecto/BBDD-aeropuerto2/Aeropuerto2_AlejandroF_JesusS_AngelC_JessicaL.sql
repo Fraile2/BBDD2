@@ -1,35 +1,45 @@
-CREATE DATABASE ASIR5;
+CREATE DATABASE IF NOT EXISTS ASIR5;
 USE ASIR5;
 
-CREATE TABLE persona(
+DROP TABLE IF EXISTS pilota;
+DROP TABLE IF EXISTS piloto;
+DROP TABLE IF EXISTS aerolinea;
+DROP TABLE IF EXISTS puerta;
+DROP TABLE IF EXISTS terminal;
+DROP TABLE IF EXISTS compra;
+DROP TABLE IF EXISTS viajero;
+DROP TABLE IF EXISTS billete;
+DROP TABLE IF EXISTS vuelo;
+DROP TABLE IF EXISTS avion;
+DROP TABLE IF EXISTS cliente;
+DROP TABLE IF EXISTS persona;
+
+CREATE TABLE IF NOT EXISTS persona(
     dni VARCHAR(9) CHECK(LENGTH(dni)>8),
     n_pasaporte VARCHAR(9) CHECK(LENGTH(n_pasaporte)>8),
     nombre VARCHAR(26) NOT NULL,
     apellidos VARCHAR(60) NOT NULL,
     fecha_nacimiento DATE,
+    INDEX(dni, n_pasaporte),
     UNIQUE(n_pasaporte),
     PRIMARY KEY(dni)
 );
-
-CREATE TABLE cliente(
+CREATE TABLE IF NOT EXISTS cliente(
     dni_cliente VARCHAR(9),
     PRIMARY KEY(dni_cliente),
     FOREIGN KEY(dni_cliente) REFERENCES persona(dni) ON DELETE CASCADE ON UPDATE CASCADE
 );
-
-CREATE TABLE avion(
+CREATE TABLE IF NOT EXISTS avion(
     matricula VARCHAR(10) PRIMARY KEY,
     marca VARCHAR(31) NOT NULL,
     modelo VARCHAR(63) NOT NULL
 );
-
-CREATE TABLE vuelo(
+CREATE TABLE IF NOT EXISTS vuelo(
     id_vuelo INT AUTO_INCREMENT PRIMARY KEY,
     duracion DOUBLE NOT NULL,
     fecha_hora_vuelo DATETIME NOT NULL
 );
-
-CREATE TABLE billete(
+CREATE TABLE IF NOT EXISTS billete(
     id_billete INT AUTO_INCREMENT,
     fecha DATE NOT NULL,
     numero_asiento VARCHAR(4) CHECK(LENGTH(numero_asiento) > 3),
@@ -37,8 +47,7 @@ CREATE TABLE billete(
     tipo ENUM('ida', 'ida_vuelta') NOT NULL,
     PRIMARY KEY (id_billete)
 );
-
-CREATE TABLE viajero(
+CREATE TABLE IF NOT EXISTS viajero(
     dni_viajero VARCHAR(9),
     billete INT NOT NULL,
     vuelo INT NOT NULL,
@@ -47,8 +56,7 @@ CREATE TABLE viajero(
     FOREIGN KEY(billete) REFERENCES billete(id_billete),
     FOREIGN KEY(vuelo) REFERENCES vuelo(id_vuelo)
 );
-
-CREATE TABLE compra(
+CREATE TABLE IF NOT EXISTS compra(
     id_compra INT AUTO_INCREMENT,
     id_billete INT NOT NULL,
     dni_cliente VARCHAR(9) CHECK(LENGTH(dni_cliente) > 8),
@@ -57,13 +65,11 @@ CREATE TABLE compra(
     FOREIGN KEY (dni_cliente) REFERENCES cliente(dni_cliente),
     FOREIGN KEY (id_billete) REFERENCES billete(id_billete)
 );
-
-CREATE TABLE terminal(
+CREATE TABLE IF NOT EXISTS terminal(
     id_terminal INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(25) NOT NULL
 );
-
-CREATE TABLE puerta(
+CREATE TABLE IF NOT EXISTS puerta(
     id_puerta INT AUTO_INCREMENT,
     terminal INT NOT NULL,
     vuelo INT NOT NULL,
@@ -71,13 +77,11 @@ CREATE TABLE puerta(
     FOREIGN KEY(terminal) REFERENCES terminal(id_terminal),
     FOREIGN KEY(vuelo) REFERENCES vuelo(id_vuelo)
 );
-
-CREATE TABLE aerolinea(
+CREATE TABLE IF NOT EXISTS aerolinea(
     id_aerolinea INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     nombre VARCHAR(60) NOT NULL
 );
-
-CREATE TABLE piloto(
+CREATE TABLE IF NOT EXISTS piloto(
     id_piloto INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     num_galones NUMERIC(1) CHECK(LENGTH(num_galones) < 5) NOT NULL,
     antiguedad VARCHAR(20),
@@ -88,8 +92,7 @@ CREATE TABLE piloto(
     FOREIGN KEY(id_copiloto) REFERENCES piloto(id_piloto) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY(aerolinea) REFERENCES aerolinea(id_aerolinea) ON DELETE RESTRICT
 );
-
-CREATE TABLE pilota(
+CREATE TABLE IF NOT EXISTS pilota(
     vuelo INT NOT NULL,
     avion VARCHAR(10) NOT NULL,
     piloto INT NOT NULL,

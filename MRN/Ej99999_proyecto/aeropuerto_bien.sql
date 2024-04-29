@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS persona (
     apellidos VARCHAR(60) NOT NULL,
     fecha_nacimiento DATE,
 
+    /* INDEX(dni, n_pasaporte), */
     UNIQUE(n_pasaporte),
     PRIMARY KEY (dni)
 );
